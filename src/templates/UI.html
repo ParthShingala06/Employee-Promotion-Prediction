@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Human Resource</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Employee Promotion Service</a>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the chances of an Employee to get Promoted
+        <br>
+        </h5>
+      </div>
+
+    <div class="row">
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+          <label for="department"><b></b></label>
+          <select id="department" name="Department" class="validate">
+            <option value="" disabled selected> Department</option>
+            <option value="0">HR</option>
+            <option value="1">Sales and Marketing</option>
+            <option value="2">Procurement</option>
+            <option value="3">Finance</option>
+            <option value="4">Analytics</option>
+            <option value="5">Technology</option>
+            <option value="6">Operations</option>
+            <option value="7">Legal</option>
+            <option value="8">R&D</option>
+
+          </select>
+        </div>
+        
+        <div class="input-field col s3">
+          <label for="region"><b></b></label>
+          <select id="region" name="Region" class="validate">
+            <option value="" disabled selected> Region</option>
+            <option value="1">Region 1</option>
+            <option value="2">Region 2</option>
+            <option value="3">Region 3</option>
+            <option value="4">Region 4</option>
+            <option value="5">Region 5</option>
+            <option value="6">Region 6</option>
+            <option value="7">Region 7</option>
+            <option value="8">Region 8</option>
+            <option value="9">Region 9</option>
+            <option value="10">Region 10</option>
+            <option value="11">Region 11</option>
+            <option value="12">Region 12</option>
+            <option value="13">Region 13</option>
+            <option value="14">Region 14</option>
+            <option value="15">Region 15</option>
+            <option value="16">Region 16</option>
+            <option value="17">Region 17</option>
+            <option value="18">Region 18</option>
+            <option value="19">Region 19</option>
+            <option value="20">Region 20</option>
+            <option value="21">Region 21</option>
+            <option value="22">Region 22</option>
+            <option value="23">Region 23</option>
+            <option value="24">Region 24</option>
+            <option value="25">Region 25</option>
+            <option value="26">Region 26</option>
+            <option value="27">Region 27</option>
+            <option value="28">Region 28</option>
+            <option value="29">Region 29</option>
+            <option value="30">Region 30</option>
+            <option value="31">Region 31</option>
+            <option value="32">Region 32</option>
+            <option value="33">Region 33</option>
+            <option value="34">Region 34</option>
+          </select>
+        </div>
+
+        <div class="input-field col s3">
+          <label for="education"><b></b></label>
+          <select id="education" name="Education" class="validate">
+            <option value="" disabled selected> Education</option>
+            <option value="0">Bachelors</option>
+            <option value="1">Masters and Above</option>
+            <option value="2">Below Secondary</option>
+          </select>
+        </div>
+
+        <div class="input-field col s3">
+          <label for="gender"><b></b></label>
+          <select id="gender" name="Gender" class="validate">
+            <option value="" disabled selected> Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+          <label for="age"><b style="color: black;">Age</b></label>
+          <input style="color: black;" id="age" name="age" placeholder="25" type="text" class="validate">
+        </div>
+        
+        <div class="input-field col s3" >
+          <label for="length_of_service"><b style="color: black;">Length of Service</b></label>
+          <input style="color: black;" id="length_of_service" name="length_of_service" placeholder="2" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s3">
+          <label for="awards_won"><b style="color: black;">Awards Won</b></label>
+          <input style="color: black;" id="awards_won" name="awards_won" placeholder="2" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s3">
+          <label for="avg_training_score"><b style="color: black;">Training Score %</b></label>
+          <input style="color: black;" id="avg_training_score" name="avg_training_score" placeholder="56" type="text" class="validate">
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="input-field col s3">
+ 
+        </div>
+        <div class="input-field col s3">
+          <label for="previous_year_rating"><b></b></label>
+          <select id="previous_year_rating" name="previous_year_rating" class="validate">
+            <option value="" disabled selected> Previous Year Rating</option>
+            <option value="1">1 ON 5</option>
+            <option value="2">2 ON 5</option>
+            <option value="3">3 ON 5</option>
+            <option value="4">4 ON 5</option>
+            <option value="5">5 ON 5</option>
+
+          </select>
+        </div>
+        
+        <div class="input-field col s3">
+          <label for="KPI"><b></b></label>
+          <select id="KPI" name="KPI" class="validate">
+            <option value="" disabled selected> KPIs are greater than 80</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+
+        <div class="input-field col s3">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <h4 style="color: darkblue; font-weight:5px;" align="center"<b>{{pred}}</b></h4>
+      <h6 align="center"<b>{{ModelResult}}</b></h6>
+
+    </div>
+  </div>
+
+<br></br>
+<br></br>
+
+</div>
+
+  <footer class="page-footer orange">
+
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    // Initialize Materialize components
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+  </body>
+</html>
+
